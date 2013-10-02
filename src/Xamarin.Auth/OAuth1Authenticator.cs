@@ -156,8 +156,9 @@ namespace Xamarin.Auth
 		/// </param>
 		public override void OnPageLoaded (Uri url)
 		{
-			if (url.Host == callbackUrl.Host && url.AbsolutePath == callbackUrl.AbsolutePath) {
-				
+//			if (url.Host == callbackUrl.Host && url.AbsolutePath == callbackUrl.AbsolutePath) {
+			if (url.AbsolutePath == callbackUrl.AbsolutePath) {
+	
 				var query = url.Query;
 				var r = WebEx.FormDecode (query);
 
